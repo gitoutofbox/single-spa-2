@@ -1,0 +1,48 @@
+<single-spa-router  mode="history">
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+  <nav>
+    
+  </nav>
+  
+  <main>
+    <application name="navbar"></application>
+
+    <route default>
+      <div class="welcome">
+        Welcome to Microfrontends demo.
+      </div>
+    </route>
+    <route path="/demo-angular">
+      <application name="@angular-app/angular-demo"></application>
+    </route>
+    
+    <route path="/vue">
+      <application name="@vue-app/vue-app"></application>
+    </route>
+    
+
+    <route  path="/simple-js">
+      <application name="@simple-js/cookie-consent"></application>
+    </route>
+    <route  path="/react">
+      <application name="@react-demo/react-demo"></application>
+    </route>
+    
+  </main>
+</single-spa-router>
